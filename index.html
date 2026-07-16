@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro Mandal Fitness | Gym in Telo</title>
+  <meta name="description" content="Join Pro Mandal Fitness in Telo for weight loss, muscle gain, strength training, and body transformation. Premium gym environment, affordable membership plans, and motivating atmosphere." />
+  <meta name="keywords" content="Pro Mandal Fitness, gym in Telo, best gym in Telo, fitness gym, muscle gain, weight loss, strength training" />
+  <meta name="theme-color" content="#d61f2c" />
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --bg-soft:#131313;
+      --card:#171717;
+      --card-2:#1d1d1d;
+      --text:#ffffff;
+      --muted:#c8c8c8;
+      --red:#d61f2c;
+      --red-2:#ff3b47;
+      --border:rgba(255,255,255,0.08);
+      --shadow:0 18px 45px rgba(0,0,0,0.35);
+      --radius:18px;
+      --max:1200px;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(214,31,44,0.16), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(214,31,44,0.10), transparent 28%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(92%, var(--max));
+      margin:auto;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 24px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-weight:700;
+      transition:0.3s ease;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--red), var(--red-2));
+      color:#fff;
+      box-shadow:0 10px 25px rgba(214,31,44,0.25);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 14px 30px rgba(214,31,44,0.35);
+    }
+
+    .btn-outline{
+      border-color:rgba(255,255,255,0.18);
+      background:rgba(255,255,255,0.04);
+      color:#fff;
+    }
+
+    .btn-outline:hover{
+      background:rgba(255,255,255,0.08);
+      transform:translateY(-2px);
+    }
+
+    .section{
+      padding:88px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:14px;
+      font-size:clamp(28px, 4vw, 42px);
+      line-height:1.15;
+      letter-spacing:0.3px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:var(--muted);
+      max-width:760px;
+      margin:0 auto 42px;
+      font-size:16px;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      color:#fff;
+      background:rgba(214,31,44,0.15);
+      border:1px solid rgba(214,31,44,0.28);
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:13px;
+      letter-spacing:0.5px;
+      text-transform:uppercase;
+      margin-bottom:18px;
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter:blur(14px);
+      background:rgba(10,10,10,0.78);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height:78px;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      font-size:22px;
+      letter-spacing:0.3px;
+    }
+
+    .brand-badge{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      background:linear-gradient(135deg, var(--red), var(--red-2));
+      display:grid;
+      place-items:center;
+      font-weight:900;
+      box-shadow:0 10px 24px rgba(214,31,44,0.3);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      list-style:none;
+      font-size:15px;
+      color:#eaeaea;
+    }
+
+    .nav-links a:hover{
+      color:#fff;
+    }
+
+    .nav-actions{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .menu-btn{
+      display:none;
+      width:46px;
+      height:46px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,0.04);
+      color:#fff;
+      font-size:22px;
+      cursor:pointer;
+    }
+
+    /* Hero */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:80px 0 56px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:36px;
+      align-items:center;
+    }
+
+    .hero h1{
+      font-size:clamp(40px, 6vw, 72px);
+      line-height:0.98;
+      margin-bottom:18px;
+      letter-spacing:0.2px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      font-size:18px;
+      max-width:700px;
+      margin-bottom:28px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:28px;
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+      max-width:620px;
+    }
+
+    .hero-point{
+      background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px 18px;
+      color:#f2f2f2;
+    }
+
+    .hero-card{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
+        linear-gradient(135deg, rgba(214,31,44,0.25), rgba(214,31,44,0.04));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+      min-height:520px;
+    }
+
+    .hero-visual{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      filter:saturate(1.05);
+    }
+
+    .hero-overlay{
+      position:relative;
+      z-index:2;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:28px;
+    }
+
+    .hero-stat-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+    }
+
+    .hero-stat{
+      background:rgba(0,0,0,0.45);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:18px;
+      backdrop-filter:blur(10px);
+    }
+
+    .hero-stat h3{
+      font-size:28px;
+      margin-bottom:4px;
+      color:#fff;
+    }
+
+    .hero-stat p{
+      margin:0;
+      color:#d9d9d9;
+      font-size:14px;
+    }
+
+    /* About + cards */
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .about-card,
+    .image-card,
+    .contact-card,
+    .trainer-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .about-card{
+      padding:34px;
+    }
+
+    .about-card p{
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .about-highlights{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .pill{
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--border);
+      font-weight:700;
+      color:#f3f3f3;
+    }
+
+    .image-card{
+      min-height:420px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .image-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    }
+
+    /* Feature cards */
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025));
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      transition:0.3s ease;
+      height:100%;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(214,31,44,0.35);
+    }
+
+    .icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      margin-bottom:16px;
+      background:linear-gradient(135deg, rgba(214,31,44,0.25), rgba(214,31,44,0.08));
+      border:1px solid rgba(214,31,44,0.22);
+      font-size:24px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      font-size:22px;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* Plans */
+    .plan-grid{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:20px;
+    }
+
+    .plan{
+      position:relative;
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025));
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      height:100%;
+    }
+
+    .plan.popular{
+      border-color:rgba(214,31,44,0.45);
+      transform:translateY(-6px);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)),
+        radial-gradient(circle at top right, rgba(214,31,44,0.20), transparent 35%);
+    }
+
+    .badge{
+      position:absolute;
+      top:18px;
+      right:18px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:linear-gradient(135deg, var(--red), var(--red-2));
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:0.4px;
+    }
+
+    .plan h3{
+      font-size:24px;
+      margin-bottom:10px;
+    }
+
+    .price{
+      font-size:42px;
+      font-weight:900;
+      margin:6px 0 16px;
+      line-height:1;
+    }
+
+    .price small{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+      margin-left:6px;
+    }
+
+    .plan ul{
+      list-style:none;
+      display:grid;
+      gap:10px;
+      margin:20px 0 28px;
+      color:#efefef;
+      font-size:15px;
+    }
+
+    .plan ul li::before{
+      content:"✓";
+      color:#7cffb1;
+      margin-right:10px;
+      font-weight:900;
+    }
+
+    /* Timings strip */
+    .timing-strip{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:28px;
+    }
+
+    .timing-box{
+      padding:24px;
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(214,31,44,0.12), rgba(255,255,255,0.03));
+      border:1px solid rgba(214,31,44,0.18);
+      text-align:center;
+    }
+
+    .timing-box h3{
+      font-size:24px;
+      margin-bottom:8px;
+    }
+
+    .timing-box p{
+      color:#f0f0f0;
+      font-size:18px;
+      font-weight:700;
+    }
+
+    /* Trainer */
+    .trainer-card{
+      padding:34px;
+      display:grid;
+      grid-template-columns:280px 1fr;
+      gap:26px;
+      align-items:center;
+    }
+
+    .trainer-image{
+      min-height:320px;
+      border-radius:22px;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1567013127542-490d757e6349?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+      border:1px solid var(--border);
+    }
+
+    .trainer-info p{
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .trainer-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .tag{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--border);
+      font-size:14px;
+      font-weight:700;
+    }
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:16px;
+    }
+
+    .gallery-item{
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      min-height:220px;
+      background:#111;
+      position:relative;
+      box-shadow:var(--shadow);
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform 0.45s ease;
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.06);
+    }
+
+    /* Testimonials */
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:20px;
+    }
+
+    .quote{
+      font-size:18px;
+      margin-bottom:16px;
+      color:#f5f5f5;
+    }
+
+    .client{
+      color:#cfcfcf;
+      font-weight:700;
+    }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+
+    .contact-card{
+      padding:30px;
+    }
+
+    .contact-list{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .contact-item{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      padding:16px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--border);
+    }
+
+    .contact-item strong{
+      display:block;
+      margin-bottom:4px;
+    }
+
+    .contact-item p,
+    .contact-item a{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    form{
+      display:grid;
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .field{
+      width:100%;
+      padding:14px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.04);
+      color:#fff;
+      outline:none;
+    }
+
+    .field::placeholder{
+      color:#bdbdbd;
+    }
+
+    textarea.field{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .note{
+      color:#a9a9a9;
+      font-size:14px;
+      margin-top:10px;
+    }
+
+    /* CTA Banner */
+    .cta-banner{
+      background:
+        radial-gradient(circle at top right, rgba(214,31,44,0.24), transparent 30%),
+        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025));
+      border:1px solid var(--border);
+      border-radius:26px;
+      padding:42px;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+
+    .cta-banner h2{
+      font-size:clamp(30px, 4vw, 48px);
+      margin-bottom:12px;
+    }
+
+    .cta-banner p{
+      color:var(--muted);
+      max-width:780px;
+      margin:0 auto 22px;
+      font-size:17px;
+    }
+
+    .cta-actions{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    /* Footer */
+    footer{
+      padding:36px 0 48px;
+      border-top:1px solid var(--border);
+      background:rgba(255,255,255,0.02);
+      margin-top:40px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.3fr 1fr 1fr;
+      gap:28px;
+    }
+
+    .footer-brand p{
+      color:var(--muted);
+      margin-top:14px;
+      max-width:420px;
+    }
+
+    .footer-col h4{
+      margin-bottom:14px;
+      font-size:18px;
+    }
+
+    .footer-links{
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+
+    .footer-links a{
+      color:var(--muted);
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    .footer-bottom{
+      margin-top:28px;
+      padding-top:20px;
+      border-top:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      color:#bdbdbd;
+      font-size:14px;
+    }
+
+    /* Floating buttons */
+    .float-wrap{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:999;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .float-btn{
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      box-shadow:0 14px 30px rgba(0,0,0,0.35);
+      font-size:24px;
+      color:#fff;
+    }
+
+    .float-call{
+      background:#111;
+      border:1px solid rgba(255,255,255,0.12);
+    }
+
+    .float-wa{
+      background:#25D366;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px){
+      .hero-grid,
+      .grid-2,
+      .contact-grid,
+      .trainer-card{
+        grid-template-columns:1fr;
+      }
+
+      .plan-grid{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+      }
+
+      .card-grid,
+      .testimonial-grid{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+      }
+
+      .gallery{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media (max-width: 820px){
+      .nav-links,
+      .nav-actions .btn{
+        display:none;
+      }
+
+      .menu-btn{
+        display:block;
+      }
+
+      .mobile-menu{
+        display:none;
+        padding:16px 0 22px;
+        border-top:1px solid var(--border);
+      }
+
+      .mobile-menu.open{
+        display:block;
+      }
+
+      .mobile-menu ul{
+        list-style:none;
+        display:grid;
+        gap:12px;
+      }
+
+      .mobile-menu a{
+        display:block;
+        padding:14px 16px;
+        border-radius:14px;
+        background:rgba(255,255,255,0.04);
+        border:1px solid var(--border);
+      }
+
+      .hero-points,
+      .about-highlights,
+      .timing-strip{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .section{
+        padding:72px 0;
+      }
+
+      .hero{
+        padding-top:56px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .card-grid,
+      .plan-grid,
+      .testimonial-grid,
+      .gallery,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-card{
+        min-height:420px;
+      }
+
+      .trainer-card{
+        padding:24px;
+      }
+
+      .about-card,
+      .contact-card{
+        padding:24px;
+      }
+
+      .cta-banner{
+        padding:30px 22px;
+      }
+
+      .float-wrap{
+        right:14px;
+        bottom:14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="#home" class="brand">
+          <span class="brand-badge">PM</span>
+          <span>Pro Mandal Fitness</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#trainer">Trainer</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a class="btn btn-outline" href="tel:+917488507920">Call Now</a>
+          <a class="btn btn-primary" href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20know%20about%20membership%20plans%20and%20gym%20details." target="_blank">Join Now</a>
+        </div>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#trainer">Trainer</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="tel:+917488507920">Call Now</a></li>
+          <li><a href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20know%20about%20membership%20plans%20and%20gym%20details." target="_blank">Join on WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Train Hard • Transform Strong</span>
+          <h1>Transform Your Body at <span style="color: var(--red-2);">Pro Mandal Fitness</span></h1>
+          <p>
+            Join Pro Mandal Fitness in Telo and train in a powerful, motivating environment built for real results.
+            Whether your goal is weight loss, muscle gain, strength building, or overall fitness, we help you stay
+            disciplined, push harder, and transform with confidence.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20know%20about%20membership%20plans%20and%20gym%20details." target="_blank">WhatsApp Us</a>
+            <a class="btn btn-outline" href="#plans">View Membership</a>
+            <a class="btn btn-outline" href="tel:+917488507920">Call Now</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="hero-point">🏋️ Modern Gym Equipment</div>
+            <div class="hero-point">🔥 Weight Loss & Muscle Gain Support</div>
+            <div class="hero-point">💪 Beginner Friendly Guidance</div>
+            <div class="hero-point">⚡ Energetic Workout Environment</div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-visual"></div>
+          <div class="hero-overlay">
+            <div class="hero-stat-grid">
+              <div class="hero-stat">
+                <h3>₹599</h3>
+                <p>Monthly Membership</p>
+              </div>
+              <div class="hero-stat">
+                <h3>5:30 AM</h3>
+                <p>Morning Starts</p>
+              </div>
+              <div class="hero-stat">
+                <h3>4 Plans</h3>
+                <p>Flexible Membership Options</p>
+              </div>
+              <div class="hero-stat">
+                <h3>9:00 PM</h3>
+                <p>Evening Closing Time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="grid-2">
+        <div class="about-card">
+          <span class="eyebrow">About Us</span>
+          <h2 style="font-size:clamp(30px,4vw,44px); margin-bottom:16px;">Welcome to Pro Mandal Fitness</h2>
+          <p>
+            At Pro Mandal Fitness, fitness is more than just exercise — it’s a commitment to becoming stronger,
+            healthier, and more confident every day. Located in Telo near Nehru High School, Bank of India,
+            First Floor, our gym is designed for people who want serious progress in a motivating and disciplined environment.
+          </p>
+          <p>
+            Whether you’re just starting your fitness journey or chasing advanced goals, we provide the right space,
+            energy, and support to help you move forward. From fat loss and muscle gain to strength building and
+            overall body transformation, this is where dedication meets results.
+          </p>
+
+          <div class="about-highlights">
+            <div class="pill">📍 Telo, Near Nehru High School</div>
+            <div class="pill">🏦 Bank of India, First Floor</div>
+            <div class="pill">📞 74885 07920</div>
+            <div class="pill">📲 @pro_mandal_fitness</div>
+          </div>
+        </div>
+
+        <div class="image-card" aria-label="Gym interior image"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="section" id="why">
+    <div class="container">
+      <h2 class="section-title">Why Choose Pro Mandal Fitness</h2>
+      <p class="section-subtitle">
+        A motivating gym environment, flexible plans, and focused training support for people who want visible results.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="icon">🏋️</div>
+          <h3>Modern Equipment</h3>
+          <p>Train with quality gym equipment designed to support strength training, muscle building, fat loss, and overall fitness progress.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔥</div>
+          <h3>Motivating Environment</h3>
+          <p>Our gym atmosphere is energetic, disciplined, and built to keep you focused on your goals every single day.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🚀</div>
+          <h3>Beginner to Advanced Support</h3>
+          <p>Whether you are just starting or already experienced, you can train according to your current level and long-term goal.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎯</div>
+          <h3>Personal Attention</h3>
+          <p>We believe in proper form, workout consistency, and building confidence so members can move toward visible results.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">💸</div>
+          <h3>Affordable Memberships</h3>
+          <p>Choose from flexible pricing plans that fit different commitment levels without compromising the gym experience.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚡</div>
+          <h3>Transformation Focused</h3>
+          <p>We don’t just offer a place to work out — we help you work toward a stronger body, better stamina, and a better lifestyle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Fitness Services</h2>
+      <p class="section-subtitle">
+        Every member has a different goal. That’s why Pro Mandal Fitness supports multiple training needs with a focused, energetic environment.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="icon">⚖️</div>
+          <h3>Weight Loss Training</h3>
+          <p>Build stamina, stay active, and work consistently toward fat loss goals through disciplined gym workouts and better routine.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">💪</div>
+          <h3>Muscle Gain Programs</h3>
+          <p>Progressive strength-based training support for members focused on size, strength, and long-term muscle-building consistency.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🏆</div>
+          <h3>Strength Training</h3>
+          <p>Improve power, endurance, and overall physical performance with regular resistance training and consistent effort.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🧭</div>
+          <h3>Beginner Guidance</h3>
+          <p>New to the gym? We help you understand basic workout flow, discipline, and confidence so you can start the right way.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">❤️</div>
+          <h3>General Fitness</h3>
+          <p>Stay active, improve energy levels, maintain body strength, and build a healthier routine through regular training.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔥</div>
+          <h3>Body Transformation</h3>
+          <p>For people serious about visible change, we focus on consistent effort, structured training, and long-term discipline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section class="section" id="plans">
+    <div class="container">
+      <h2 class="section-title">Membership Plans</h2>
+      <p class="section-subtitle">
+        Choose the plan that fits your fitness journey and commitment level. Start small or go all-in on your transformation.
+      </p>
+
+      <div class="plan-grid">
+        <div class="plan">
+          <h3>Monthly</h3>
+          <div class="price">₹599 <small>/ month</small></div>
+          <ul>
+            <li>Full gym access</li>
+            <li>Great for beginners</li>
+            <li>Weight loss & muscle gain environment</li>
+            <li>Morning & evening batch access</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20join%20the%20Monthly%20plan." target="_blank">Choose Plan</a>
+        </div>
+
+        <div class="plan popular">
+          <span class="badge">Popular</span>
+          <h3>3 Months</h3>
+          <div class="price">₹1499 <small>/ 3 months</small></div>
+          <ul>
+            <li>Better value than monthly</li>
+            <li>Ideal for building consistency</li>
+            <li>Supports visible progress</li>
+            <li>Perfect for disciplined routine</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20join%20the%203%20Months%20plan." target="_blank">Choose Plan</a>
+        </div>
+
+        <div class="plan">
+          <h3>6 Months</h3>
+          <div class="price">₹2899 <small>/ 6 months</small></div>
+          <ul>
+            <li>Best for transformation goals</li>
+            <li>Long-term commitment support</li>
+            <li>Stronger routine and discipline</li>
+            <li>Great value for dedicated members</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20join%20the%206%20Months%20plan." target="_blank">Choose Plan</a>
+        </div>
+
+        <div class="plan">
+          <h3>Annual</h3>
+          <div class="price">₹5599 <small>/ year</small></div>
+          <ul>
+            <li>Best overall value</li>
+            <li>Ideal for serious fitness journey</li>
+            <li>Long-term body transformation focus</li>
+            <li>Train with maximum consistency</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20join%20the%20Annual%20plan." target="_blank">Choose Plan</a>
+        </div>
+      </div>
+
+      <div class="timing-strip">
+        <div class="timing-box">
+          <h3>Morning Timing</h3>
+          <p>5:30 AM – 10:30 AM</p>
+        </div>
+        <div class="timing-box">
+          <h3>Evening Timing</h3>
+          <p>4:00 PM – 9:00 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainer -->
+  <section class="section" id="trainer">
+    <div class="container">
+      <div class="trainer-card">
+        <div class="trainer-image" aria-label="Trainer image placeholder"></div>
+        <div class="trainer-info">
+          <span class="eyebrow">Owner / Fitness Mentor</span>
+          <h2 style="font-size:clamp(30px,4vw,42px); margin-bottom:12px;">Akash Mandal</h2>
+          <p>
+            Pro Mandal Fitness is built on discipline, consistency, and the belief that every person can become a stronger version of themselves
+            with the right environment and mindset. Under the guidance of <strong>Akash Mandal</strong>, the gym focuses on motivation, hard work,
+            and helping members stay committed to their fitness goals.
+          </p>
+          <p>
+            The vision is simple: create a local fitness space where people feel energized to train seriously, improve their health,
+            and transform both physically and mentally through regular effort.
+          </p>
+
+          <div class="trainer-tags">
+            <span class="tag">Discipline Focused</span>
+            <span class="tag">Motivating Environment</span>
+            <span class="tag">Consistency Driven</span>
+            <span class="tag">Transformation Mindset</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Members Say</h2>
+      <p class="section-subtitle">
+        Replace these with your real member reviews later. For now, these give the website a complete look.
+      </p>
+
+      <div class="testimonial-grid">
+        <div class="card">
+          <p class="quote">“Great gym atmosphere and very motivating environment. A solid place to train seriously in Telo.”</p>
+          <div class="client">— Member Review</div>
+        </div>
+
+        <div class="card">
+          <p class="quote">“Affordable plans, good workout environment, and the kind of place where you feel pushed to improve.”</p>
+          <div class="client">— Member Review</div>
+        </div>
+
+        <div class="card">
+          <p class="quote">“If you want to work on body transformation with discipline and consistency, Pro Mandal Fitness is a great choice.”</p>
+          <div class="client">— Member Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section-title">Inside Pro Mandal Fitness</h2>
+      <p class="section-subtitle">
+        Replace these stock images with your real gym photos later for a stronger local and authentic website.
+      </p>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=900&q=80" alt="Gym photo 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=900&q=80" alt="Gym photo 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=900&q=80" alt="Gym photo 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80" alt="Gym photo 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=900&q=80" alt="Gym photo 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=900&q=80" alt="Gym photo 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Gym photo 7" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" alt="Gym photo 8" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Pro Mandal Fitness</h2>
+      <p class="section-subtitle">
+        Ready to start your fitness journey? Visit us, call us, or message us on WhatsApp to know more about memberships and gym timings.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3 style="font-size:28px; margin-bottom:8px;">Get in Touch</h3>
+          <p style="color:var(--muted);">Have questions about membership or training? Reach out today and take the first step toward your transformation.</p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div>📍</div>
+              <div>
+                <strong>Address</strong>
+                <p>Telo, Near Nehru High School, Bank of India, First Floor</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div>📞</div>
+              <div>
+                <strong>Phone / WhatsApp</strong>
+                <a href="tel:+917488507920">+91 74885 07920</a><br />
+                <a href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20know%20about%20membership%20plans%20and%20gym%20details." target="_blank">Chat on WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div>🕒</div>
+              <div>
+                <strong>Gym Timings</strong>
+                <p>Morning: 5:30 AM – 10:30 AM<br />Evening: 4:00 PM – 9:00 PM</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div>📸</div>
+              <div>
+                <strong>Instagram</strong>
+                <a href="https://instagram.com/pro_mandal_fitness" target="_blank">@pro_mandal_fitness</a>
+              </div>
+            </div>
+          </div>
+
+          <p class="note">Tip: Add your Google Maps link here later so people can find the gym easily.</p>
+        </div>
+
+        <div class="contact-card">
+          <h3 style="font-size:28px; margin-bottom:8px;">Enquire Now</h3>
+          <p style="color:var(--muted); margin-bottom:12px;">This form opens WhatsApp with the member’s details.</p>
+
+          <form id="enquiryForm">
+            <input class="field" type="text" id="name" placeholder="Full Name" required />
+            <input class="field" type="tel" id="phone" placeholder="Mobile Number" required />
+            <select class="field" id="goal" required>
+              <option value="">Select Fitness Goal</option>
+              <option>Weight Loss</option>
+              <option>Muscle Gain</option>
+              <option>Strength Training</option>
+              <option>General Fitness</option>
+              <option>Body Transformation</option>
+            </select>
+            <input class="field" type="text" id="time" placeholder="Preferred Timing (Morning / Evening)" />
+            <textarea class="field" id="message" placeholder="Your message"></textarea>
+            <button type="submit" class="btn btn-primary">Send on WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Your Transformation Starts Today</h2>
+        <p>
+          Stop waiting for the perfect time. Start your fitness journey now with the right mindset,
+          the right environment, and the right support at Pro Mandal Fitness.
+        </p>
+
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20join%20the%20gym." target="_blank">Join on WhatsApp</a>
+          <a class="btn btn-outline" href="tel:+917488507920">Call 74885 07920</a>
+          <a class="btn btn-outline" href="https://instagram.com/pro_mandal_fitness" target="_blank">Follow Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-badge">PM</span>
+            <span>Pro Mandal Fitness</span>
+          </div>
+          <p>
+            Train Hard. Transform Strong. A motivating local gym in Telo focused on consistency,
+            discipline, strength, and real fitness progress.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#plans">Plans</a></li>
+            <li><a href="#trainer">Trainer</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+917488507920">+91 74885 07920</a></li>
+            <li><a href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20know%20about%20membership%20plans%20and%20gym%20details." target="_blank">WhatsApp Chat</a></li>
+            <li><a href="https://instagram.com/pro_mandal_fitness" target="_blank">@pro_mandal_fitness</a></li>
+            <li>Telo, Near Nehru High School</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Pro Mandal Fitness. All Rights Reserved.</span>
+        <span>Designed for strength, discipline, and transformation.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <div class="float-wrap">
+    <a class="float-btn float-call" href="tel:+917488507920" aria-label="Call Pro Mandal Fitness">📞</a>
+    <a class="float-btn float-wa" href="https://wa.me/917488507920?text=Hello%20Pro%20Mandal%20Fitness%2C%20I%20want%20to%20know%20about%20membership%20plans%20and%20gym%20details." target="_blank" aria-label="WhatsApp Pro Mandal Fitness">💬</a>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // WhatsApp enquiry form
+    const form = document.getElementById('enquiryForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const goal = document.getElementById('goal').value.trim();
+      const time = document.getElementById('time').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const text =
+`Hello Pro Mandal Fitness,
+I want to enquire about gym membership.
+
+Name: ${name}
+Phone: ${phone}
+Fitness Goal: ${goal}
+Preferred Timing: ${time || 'Not mentioned'}
+Message: ${message || 'No additional message'}`;
+
+      const url = "https://wa.me/917488507920?text=" + encodeURIComponent(text);
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
